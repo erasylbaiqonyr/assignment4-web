@@ -1,0 +1,164 @@
+
+:root {
+    --green: #0F6B5F;
+    --orange: #F2A93B;
+    --dark: #16302B;
+    --background: #F4F7F5;
+    --light-green: #E6EFEC;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--dark);
+    font-family: "Montserrat", sans-serif;
+}
+
+.booking-card {
+    max-width: 900px;
+    background: white;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(22, 48, 43, 0.15);
+}
+
+.booking-header {
+    background: var(--green);
+    padding: 28px 35px;
+    color: white;
+}
+
+.booking-header h1 {
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.booking-form {
+    padding: 35px;
+}
+
+.form-label,
+legend.form-label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-control,
+.form-select {
+    background: var(--background);
+    border: 1px solid var(--light-green);
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 14px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(15, 107, 95, 0.15);
+}
+
+.input-group-text {
+    background: var(--green);
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.trip-toggle .btn {
+    border-color: var(--green);
+    color: var(--green);
+    font-size: 14px;
+    padding: 10px 20px;
+}
+
+.trip-toggle .btn-check:checked + .btn {
+    background: var(--green);
+    border-color: var(--green);
+    color: white;
+}
+
+.form-check-input:checked {
+    background-color: var(--green);
+    border-color: var(--green);
+}
+
+.btn-clear {
+    border: 1px solid var(--green);
+    color: var(--dark);
+    border-radius: 12px;
+    padding: 12px 25px;
+    font-weight: 600;
+}
+
+.btn-clear:hover {
+    background: var(--light-green);
+    border-color: var(--green);
+}
+
+.btn-find {
+    background: var(--orange);
+    color: var(--dark);
+    border-radius: 12px;
+    padding: 12px 25px;
+    font-weight: 700;
+}
+
+.btn-find:hover {
+    background: #e59b28;
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 15px !important;
+    }
+
+    .booking-header {
+        padding: 22px;
+    }
+
+    .booking-header h1 {
+        font-size: 19px;
+    }
+
+    .booking-form {
+        padding: 20px;
+    }
+
+    .booking-actions .btn {
+        width: 100%;
+    }
+
+    .booking-actions .btn-find {
+        order: -1;
+    }
+}
+
+.form-control:user-invalid,
+.form-select:user-invalid,
+textarea:user-invalid {
+    border-color: #dc3545;
+}
+
+.form-control:user-valid,
+.form-select:user-valid,
+textarea:user-valid {
+    border-color: #198754;
+}
+
+.form-control:user-invalid ~ .invalid-feedback,
+.form-select:user-invalid ~ .invalid-feedback,
+textarea:user-invalid ~ .invalid-feedback,
+.form-check-input:user-invalid ~ .invalid-feedback {
+    display: block;
+}
+
+.form-check-input:user-invalid {
+    border-color: #dc3545;
+}
